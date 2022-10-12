@@ -1,0 +1,31 @@
+#include <Arduino.h>
+#include <IRremoteESP8266.h>
+#include <IRrecv.h>
+#include <IRutils.h>
+
+unsigned long  MyData;
+int IRrecv irrecv(2);
+decode_results results;
+void setup()
+{
+  MyData = 0;
+  Serial.begin(9600);
+   irrecv.enableIRIn();
+    while(!Serial) {
+      delay(50);
+    Serial.println();
+    Serial.print("IRReceiver is now running and waiting");
+    Serial.println(2);
+    }
+    
+    }
+ 
+void loop()
+{
+  if (irrecv.decode(&results)) {
+    MyData = int((results.value));
+    Serial.print("you Recevied this data ");
+    Serial.println(MyData);
+    irrecv.resume();
+  }
+}

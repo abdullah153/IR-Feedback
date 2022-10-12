@@ -11,6 +11,7 @@ So setup your ESP on Arduino IDE
 
 Connect the IR reciever with your ESP then upload simple code to it to recieve IR codes
 
+
 After you know every codes you want to control it write it down to the code of IR Feedback file
 
 In IR feedback code you will need green led & red led 

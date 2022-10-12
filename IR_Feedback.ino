@@ -46,11 +46,11 @@ void loop() {
        digitalWrite(redPin,LOW); 
        Serial.println(MyData);      
 
-    if (MyData == IR readind number ){ 
+    if (MyData == IR reading value ){ 
       delay(250);
       Serial.print("[HTTP] begin...\n");
-      http.begin(client, "API");    // API of the device you want to control
-      http.setAuthorization("username","password"); // for your hub
+      http.begin(client, "API");    // API or ip of the device you want to control
+      http.setAuthorization("username","password"); // for your hub 
     Serial.print("[HTTP] GET...\n");
     int httpCode = http.GET();    
     if (httpCode > 0) {
@@ -59,7 +59,7 @@ void loop() {
     }
     http.end();
     }
-    // Repeat this code for all devices or buttoms you want to control it
+    // Repeat above code for all devices or buttons you want to control it
      else {
       Serial.printf("Failed\n");
       http.end();
