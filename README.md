@@ -22,3 +22,5 @@ Red led :: Indicate that you have recieve from Remote
 After that you would like to make PCB layout Or you can just make all wiring on bread board.
 
 you will find Folder has PCB layout.
+
+![IR](https://user-images.githubusercontent.com/38689791/195322143-4584a618-9218-4190-8054-dd8c1c27203a.PNG)
